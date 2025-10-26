@@ -38,39 +38,15 @@ class Solution:
         return []
 
 
-# Alternative Solution: Brute Force
-class SolutionBruteForce:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        """
-        Brute force approach using nested loops
-        
-        Time Complexity: O(n²)
-        Space Complexity: O(1)
-        """
-        n = len(nums)
-        
-        for i in range(n):
-            for j in range(i + 1, n):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
-        
-        return []
-
-
 # Test cases
 if __name__ == "__main__":
     solution = Solution()
     
     # Test 1
     assert solution.twoSum([2, 7, 11, 15], 9) == [0, 1]
-    print("✅ Test 1 passed")
     
     # Test 2
     assert solution.twoSum([3, 2, 4], 6) == [1, 2]
-    print("✅ Test 2 passed")
     
     # Test 3
     assert solution.twoSum([3, 3], 6) == [0, 1]
-    print("✅ Test 3 passed")
-    
-    print("\n🎉 All tests passed!")
