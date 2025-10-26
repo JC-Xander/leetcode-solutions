@@ -1,0 +1,60 @@
+name: Update LeetCode Stats
+
+on:
+    schedule:
+        - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC
+    workflow_dispatch:  # Allows manual triggering of the workflow
+    push:
+        branches:
+            - main
+        paths:
+            - '.leetcode/update_stats.py'
+
+jobs:
+    update-stats:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: 📥 Checkout Repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            
+            - name: 🐍 Setup Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: '3.11'
+                  cache: 'pip'
+            
+            - name: 📦 Install Dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install requests
+            
+            - name: 🔄 Update LeetCode Statistics
+              run: |
+                  python .leetcode/update_stats.py
+            
+            - name: 📝 Check for Changes
+              id: check_changes
+              run: |
+                  git diff --quiet README.md || echo "changed=true" >> $GITHUB_OUTPUT
+            
+            - name: 💾 Commit and Push Changes
+              if: steps.check_changes.outputs.changed == 'true'
+              run: |
+                  git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+                  git add README.md
+                  git commit -m "🤖 Auto-update LeetCode statistics [skip ci]"
+                  git push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            
+            - name: ✅ Success Message
+              if: steps.check_changes.outputs.changed == 'true'
+              run: echo "✅ LeetCode statistics updated successfully!"
+            
+            - name: ℹ️ No Changes
+              if: steps.check_changes.outputs.changed != 'true'
+              run: echo "ℹ️ No changes detected in statistics"
