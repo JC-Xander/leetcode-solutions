@@ -20,17 +20,6 @@ jobs:
               with:
                   fetch-depth: 0
             
-            - name: 🐍 Setup Python
-              uses: actions/setup-python@v5
-              with:
-                  python-version: '3.11'
-                  cache: 'pip'
-            
-            - name: 📦 Install Dependencies
-              run: |
-                  python -m pip install --upgrade pip
-                  pip install requests
-            
             - name: 🔄 Update LeetCode Statistics
               run: |
                   python .leetcode/update_stats.py
