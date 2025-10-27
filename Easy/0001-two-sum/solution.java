@@ -1,5 +1,3 @@
-package programLibraries;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +14,7 @@ public class Solution {
 				return new int[] {see.get(complement), i};
 			}
 			
-			see.put(nums[1], i);
+			see.put(nums[i], i);
 		}
 
 		return  new int[] {};
