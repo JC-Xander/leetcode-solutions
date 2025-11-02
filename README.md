@@ -1,10 +1,10 @@
 <h1 align="center">🚀 LeetCode Solutions</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Problems%20Solved-0-brightgreen?style=for-the-badge&logo=leetcode" alt="Problems Solved" />
-  <img src="https://img.shields.io/badge/Easy-0-5CB85C?style=for-the-badge&logo=leetcode" alt="Easy" />
-  <img src="https://img.shields.io/badge/Medium-0-F0AD4E?style=for-the-badge&logo=leetcode" alt="Medium" />
-  <img src="https://img.shields.io/badge/Hard-0-D9534F?style=for-the-badge&logo=leetcode" alt="Hard" />
+  <img src="https://img.shields.io/badge/Problems%20Solved-4-brightgreen?style=for-the-badge&logo=leetcode" alt="Problems Solved" />
+  <img src="https://img.shields.io/badge/Easy-1-5CB85C?style=for-the-badge&logo=leetcode" alt="Easy" />
+  <img src="https://img.shields.io/badge/Medium-2-F0AD4E?style=for-the-badge&logo=leetcode" alt="Medium" />
+  <img src="https://img.shields.io/badge/Hard-1-D9534F?style=for-the-badge&logo=leetcode" alt="Hard" />
 </p>
 
 <p align="center">
@@ -18,19 +18,19 @@
 ## 📊 Current Statistics
 
 ```text
-Total Solved    : 0/0+
-Easy            : 0
-Medium          : 0
-Hard            : 0
-Acceptance Rate : 0.0%
+Total Solved    : 4/3730+
+Easy            : 1
+Medium          : 2
+Hard            : 1
+Acceptance Rate : 88.0%
 ```
 
 ### 📈 Progress by Difficulty
 
 ```text
-Easy    ░░░░░░░░░░░░░░░░░░░░  0.0%
-Medium  ░░░░░░░░░░░░░░░░░░░░  0.0%
-Hard    ░░░░░░░░░░░░░░░░░░░░  0.0%
+Easy    ░░░░░░░░░░░░░░░░░░░░  0.1%
+Medium  ░░░░░░░░░░░░░░░░░░░░  0.1%
+Hard    ░░░░░░░░░░░░░░░░░░░░  0.1%
 ```
 
 ---
