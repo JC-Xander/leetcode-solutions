@@ -18,11 +18,11 @@
 ## 📊 Current Statistics
 
 ```text
-Total Solved    : 4/3730+
+Total Solved    : 4/3739+
 Easy            : 1
 Medium          : 2
 Hard            : 1
-Acceptance Rate : 88.0%
+Acceptance Rate : 88.5%
 ```
 
 ### 📈 Progress by Difficulty
