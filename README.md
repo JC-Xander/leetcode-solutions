@@ -18,7 +18,7 @@
 ## 📊 Current Statistics
 
 ```text
-Total Solved    : 4/3758+
+Total Solved    : 4/3768+
 Easy            : 1
 Medium          : 2
 Hard            : 1
